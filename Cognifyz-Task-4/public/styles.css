@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color:#222;
+}
+main {
+    padding-top: 70px;
+}
+#home {
+    width: 100%;
+    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
+
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    box-shadow: #111827;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background: #111827;
+
+    color: white;
+
+    box-shadow:
+        0 8px 10px rgb(3, 5, 29);
+}
+
+.nav-links{
+    display: flex;
+    gap:25px;
+    
+}
+
+.nav-links a{
+    color: rgb(248, 247, 247);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    opacity: 0.7;
+}
+.page {
+    min-height: calc(100vh - 70px);
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4a79df;
+}
+
+.hidden {
+    display: none;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 70px);
+
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("/photos/bgimg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 20px; 
+    
+}
+
+.form-container{
+    scale: 80%;
+    width: 100%;
+    max-width: 500px;
+    background: rgb(254, 255, 255);
+    padding:35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-group input :focus{
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+}
+
+.error{
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.strength-container{
+    width: 100%;
+    height: 8px;
+    margin-top: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.strength-bar{
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#passwordRules{
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.primary-btn{
+    padding: 12px 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #111827;
+    color: white;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+.primary-btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.profile-container{
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.profile-container{
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.profile-container{
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.profile-card{
+    background: white;
+    padding: 35px;
+    margin: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+
+}
+
+@media(max-width:600px){
+    .navbar{
+        flex-direction:column;
+        gap: 15px;
+    }
+    .nav-links{
+        gap: 15px;
+    }
+
+    .hero h1{
+        font-size: 35px;
+    }
+    .form-container{
+        padding: 25px;
+    }
+    
+}
